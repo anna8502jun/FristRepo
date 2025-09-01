@@ -5,7 +5,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        CreateHostBuilder(args).Build().Run();
+        var builder = CreateHostBuilder(args);
+        //builder.Services.AddScoped<WeatherService>(); // Register WeatherService
+        var app = builder.Build();
+        app.Run();
     }
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
