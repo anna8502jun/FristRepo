@@ -41,3 +41,7 @@ obj/Debug/net8.0/refint/dotnet-api-project.dll
 obj/Debug/net8.0/staticwebassets/msbuild.build.dotnet-api-project.props
 obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.dotnet-api-project.props
 obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.dotnet-api-project.props
+*.user
+/bin/Debug/net8.0
+/obj
+/.vs
