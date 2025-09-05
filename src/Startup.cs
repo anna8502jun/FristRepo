@@ -11,6 +11,9 @@ public class Startup
         services.AddControllers();
         services.AddScoped<WeatherService>(); // Register WeatherService for dependency injection
         services.AddScoped<WeatherForecast>(); // Register WeatherForecastService for dependency injection
+
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -18,6 +21,8 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
         app.UseRouting();
